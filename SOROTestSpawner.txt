@@ -1,0 +1,35 @@
+new_1-1,57,113,6	script	SORO Tester	107,{
+	mes "^ff0000[SORO Spawner]^000000";
+	mes "What do you need?";
+		switch(select("Spawn Mobs","Gimme 10 Dead Branches","Nevermind..."))
+		{
+		case 1:
+			mes "What mobs do you need spawned?";
+			switch(select("Spawn One Poring","Spawn 10 Fabres","Spawn 10 Rockers","Spawn 10 Marinas","Spawn 2 Golems"))
+				{
+				case 1:
+				atcommand "@spawn 1002 1";
+				break;
+				case 2:
+				atcommand "@spawn 1007 10";
+				break;
+				case 3:
+				atcommand "@spawn 1052 10";
+				break;
+				case 4:
+				atcommand "@spawn 1141 10";
+				break;
+				case 5:
+				atcommand "@spawn 1040 2";
+				break;
+				}
+			close;
+		case 2:
+			mes "Here you go.  GL HF DDE.";
+			atcommand "@item 604 1";
+			close;
+		case 3:
+			mes "Ok....";
+			close;
+		}
+}
